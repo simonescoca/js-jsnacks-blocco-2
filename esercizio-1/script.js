@@ -6,12 +6,18 @@ console.log ("Ti faccio inserire numeri nell'array finchè la loro somma non arr
 const listaNumeri = []
 let sum = 0
 
-while (sum < 50){
+while (sum < 50) {
 
-    const numeroDaInserire = parseInt (prompt ("Inserisci un numero intero positivo"))
-    listaNumeri.push (numeroDaInserire)
+    let numeroDaInserire = prompt ("Inserisci un numero intero positivo")
 
-    sum += listaNumeri[listaNumeri.length - 1]
+    if ( isNaN(numeroDaInserire) || parseFloat (numeroDaInserire) !== parseInt (numeroDaInserire) || parseFloat (numeroDaInserire) < 0) {
+        console.log ("C'è un errore di scrittura dei dati")
+
+    } else {
+        numeroDaInserire = parseInt (numeroDaInserire)
+        listaNumeri.push (numeroDaInserire)
+        sum += listaNumeri[listaNumeri.length - 1]
+    }
 }
 
 console.log (listaNumeri)
