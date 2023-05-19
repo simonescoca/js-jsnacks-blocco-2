@@ -5,12 +5,20 @@
 const randomNumber = parseInt ( Math.random () * 100) + 1
 let userNumber = 0
 
-while (userNumber !== randomNumber ) {
-    userNumber = parseInt ( prompt ("Indovina il numero che ho generato compreso tra 1 e 100, estremi inclusi") )
+console.log (randomNumber)
 
-    if (userNumber > randomNumber) {
+while (userNumber != randomNumber ) {
+    userNumber = prompt ("Indovina il numero che ho generato compreso tra 1 e 100, estremi inclusi")
+
+    if ( ( isNaN (userNumber) || parseFloat (userNumber) !== parseInt (userNumber) || parseFloat (userNumber) < 1 || parseFloat (userNumber) > 100) ) {
+        console.log ("C'è un errore di scrittura dei dati")
+
+    } else if (userNumber > randomNumber) {
         console.log ("Il numero da indovinare è più piccolo")
-    } else {
+
+    } else if (userNumber < randomNumber) {
         console.log ("Il numero da indovinare è più grande")
+    } else {
+        console.log ("Hai vinto!")
     }
 }
