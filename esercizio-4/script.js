@@ -13,14 +13,14 @@ parolaPiuLunga (parola1, parola2)
  * This Function calculates which one is the longest word between the 1st word and the 2nd one, entered by the user
  */
 
-function parolaPiuLunga (parola1, parola2) {
-    if (parola1.length > parola2.length) {
-        console.log ("La prima parola è la più lunga: " + parola1)
+function parolaPiuLunga (primaParola, secondaParola) {
+    if (primaParola.length > secondaParola.length) {
+        console.log ("La prima parola è la più lunga: " + primaParola)
 
-    } else if (parola1.length < parola2.length) {
-        console.log ("La seconda parola è la più lunga: " + parola2)
+    } else if (primaParola.length < secondaParola.length) {
+        console.log ("La seconda parola è la più lunga: " + secondaParola)
 
     } else {
-        console.log ("Le due parole hanno la stessa lunghezza: " + parola1 + ", " + parola2)
+        console.log ("Le due parole hanno la stessa lunghezza: " + primaParola + ", " + secondaParola)
     }
 }
