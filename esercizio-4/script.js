@@ -7,6 +7,12 @@ const parola2 = prompt ("Inseriscine un'altra")
 
 parolaPiuLunga ()
 
+// FUNCTIONS ///////////////////////////////////////
+
+/**
+ * This Function calculates which one is the longest word between the 1st word and the 2nd one, entered by the user
+ */
+
 function parolaPiuLunga () {
     if (parola1.length > parola2.length) {
         console.log ("La prima parola è la più lunga: " + parola1)
