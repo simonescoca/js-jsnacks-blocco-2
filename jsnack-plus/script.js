@@ -17,4 +17,9 @@ function createElementLi (liContent) {
 for (let i = 0 ; i < 10 ; i++) {
     const liElement = createElementLi (userWord)
     ulElement.appendChild (liElement)
+    liElement.addEventListener ("click",
+        function () {
+            liElement.classList.toggle ("testo-barrato")
+        }
+    )
 }
