@@ -8,12 +8,6 @@
 const ulElement = document.getElementById ("ul")
 const userWord = prompt ("Che inseriamo 10 volte nella lista?")
 
-function createElementLi (liContent) {
-    const liElement = document.createElement ("li")
-    liElement.append (liContent)
-    return liElement
-}
-
 for (let i = 0 ; i < 10 ; i++) {
     const liElement = createElementLi (userWord)
     ulElement.appendChild (liElement)
@@ -22,4 +16,18 @@ for (let i = 0 ; i < 10 ; i++) {
             liElement.classList.toggle ("testo-barrato")
         }
     )
+}
+
+// FUNCTIONS //////////////////////////////////
+
+/**
+ * Creates a new li element
+ * @param liContent with custom content
+ * @returns the new li with custom content
+ */
+
+function createElementLi (liContent) {
+    const liElement = document.createElement ("li")
+    liElement.append (liContent)
+    return liElement
 }
