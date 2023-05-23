@@ -6,9 +6,10 @@
 // BONUS: Se clicchiamo sul li il suo testo verrà sbarrato
 
 const ulElement = document.getElementById ("ul")
-const userWord = prompt ("Che inseriamo 10 volte nella lista?")
+const listLength = parseInt (prompt ("Quanto è lunga la lista?") )
 
-for (let i = 0 ; i < 10 ; i++) {
+for (let i = 0 ; i < listLength ; i++) {
+    const userWord = prompt ("Che inseriamo 10 volte nella lista?")
     const liElement = createElementLi (userWord)
     ulElement.appendChild (liElement)
     liElement.addEventListener ("click",
