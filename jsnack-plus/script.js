@@ -9,7 +9,7 @@ const ulElement = document.getElementById ("ul")
 const listLength = parseInt (prompt ("Quanto è lunga la lista?") )
 
 for (let i = 0 ; i < listLength ; i++) {
-    const userWord = prompt ("Che inseriamo 10 volte nella lista?")
+    const userWord = prompt ("Inserisco lista")
     const liElement = createElementLi (userWord)
     ulElement.appendChild (liElement)
     liElement.addEventListener ("click",
