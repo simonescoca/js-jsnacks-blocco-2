@@ -11,7 +11,7 @@ for (let i = 0 ; i < 10 ; i++) {
 }
 
 console.log(peperoni)
-console.log ("Il peso totale di tutti questi peperoni è: ", pesoTotale())
+console.log ("Il peso totale di tutti questi peperoni è: ", pesoTotale().toFixed(3), " grammi")
 
 function peperone () {
     const peperone = {
