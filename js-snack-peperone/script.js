@@ -6,8 +6,8 @@
 const peperoni = []
 
 for (let i = 0 ; i < 10 ; i++) {
-    const peperone = peperone()
-    peperoni.push(peperone)
+    const nuovoPeperone = peperone()
+    peperoni.push(nuovoPeperone)
 }
 
 console.log(peperoni)
@@ -39,9 +39,9 @@ function lunghezza () {
 }
 
 function pesoTotale () {
-    let pesoTotale
+    let pesoTotale = 0
 
-    for (let i = 0 ; i < peperoni.lenght ; i++) {
+    for (let i = 0 ; i < peperoni.length ; i++) {
         const pesoCiascuno = peperoni[i].peso
         pesoTotale += pesoCiascuno
     }
