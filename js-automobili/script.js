@@ -70,7 +70,7 @@ console.log (diesel)
 const otherCars = []
 
 carList.filter ((car) => {
-    if (car.alimentazione != "benzina" || car.alimentazione != "diesel") {
+    if (car.alimentazione != "benzina" && car.alimentazione != "diesel") {
         otherCars.push (car)
     }
 })
