@@ -44,7 +44,7 @@ function fuel () {
     return randomfuel
 }
 
-// * ora seleziono ciò che mi interessa dall'array generato
+// * ora seleziono ciò che mi interessa dall'array generato, a benzina con for
 
 const aBenzina = []
 
@@ -53,5 +53,25 @@ for (let i = 0 ; i < carList.length ; i++) {
         aBenzina.push (carList[i])
     }
 }
-
 console.log (aBenzina)
+
+
+// * solo diesel con (forEach)
+const diesel = []
+
+carList.forEach ((car) => {
+    if (car.alimentazione == "diesel") {
+        diesel.push (car)
+    }
+})
+console.log (diesel)
+
+// * tutte le altre auto
+const otherCars = []
+
+carList.filter ((car) => {
+    if (car.alimentazione != "benzina" || car.alimentazione != "diesel") {
+        otherCars.push (car)
+    }
+})
+console.log (otherCars)
